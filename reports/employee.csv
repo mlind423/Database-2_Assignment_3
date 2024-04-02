@@ -1,0 +1,5 @@
+Row,Value In Database ('|' is the seperator for the sub array),Error Type
+7,[IU138624 | 5/18/1979 | 13/09/2006 | IDEPT3778 | ],Invalid Date
+17,[IU826824 | 22/12/1988 | 9/23/2007 | IDEPT8313 | ],Invalid Date
+314,[IU410633 | 6/13/1973 | 5/26/2014 | IDEPT6347 | ],Duplicate Employee ID at index 237
+891,[IU444477 | 10/25/1969 | 9/27/2007 | IDEPT7005 | ],Duplicate Employee ID at index 295
