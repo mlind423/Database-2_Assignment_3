@@ -66,6 +66,8 @@ def studentCouncelingReport():
             else:
                 if validDepID.count(i[4]) == 0:
                     foundAlerts.append([index, i, "Invalid Admitted Department"])
+                if validDepID.count(i[3]) == 0:
+                    foundAlerts.append([index, i, "Invalid Requested Department"])
                 dateString = i[1].split("/")
                 if (int(dateString[1]) < 0 or int(dateString[1]) > 31 or int(dateString[0]) < 0 or int(dateString[0]) >12):
                     foundAlerts.append([index, i, "Invalid Date"])
