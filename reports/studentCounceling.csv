@@ -1,6 +1,6 @@
 Row,Value In Database ('|' is the seperator for the sub array),Error Type
 300,[SID20135073 | 7/1/2013 | 12/7/1995 |  |  | ],Missing Values
-598,[SID20138933 | 7/1/2013 | 11/1/1995 | IDEPT2357 | IDEPT2357 | ],Duplicate Student ID at index 597
-1548,[SID20153782 | 7/1/2015 | 4/19/1998 | IDEPT1378 | IDEPT1378 | ],Duplicate Student ID at index 1547
-3092,[SID20176419 | 7/1/2017 | 11/7/1999 | IDEPT5127 | IDEPT5127 | ],Duplicate Student ID at index 3091
-3234,[SID20178412 | 7/1/2017 | 10/4/1999 | IDEPT3062 | IDEPT3062 | ],Duplicate Student ID at index 3233
+598,[SID20138933 | 7/1/2013 | 11/1/1995 | IDEPT2357 | IDEPT2357 | ],Duplicate Student Entry at index 597
+1548,[SID20153782 | 7/1/2015 | 4/19/1998 | IDEPT1378 | IDEPT1378 | ],Duplicate Student Entry at index 1547
+3092,[SID20176419 | 7/1/2017 | 11/7/1999 | IDEPT5127 | IDEPT5127 | ],Duplicate Student Entry at index 3091
+3234,[SID20178412 | 7/1/2017 | 10/4/1999 | IDEPT3062 | IDEPT3062 | ],Duplicate Student Entry at index 3233

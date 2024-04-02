@@ -23,6 +23,8 @@ def toReaderPrinter(i:list):
     formattedString = formattedString + "]"
     return [i[0], formattedString, i[2]]
 
+
+
 def departmentReport():
     departments = myreader('Department_Information.csv')
     departmentNames = dict()
@@ -44,7 +46,7 @@ def departmentReport():
                 if int(dateString[2])<=1900:
                     foundAlerts.append([index, i, "Date too early"])
                 if (int(dateString[1]) < 0 or int(dateString[1]) > 31 or int(dateString[0]) < 0 or int(dateString[0]) >12):
-                    foundAlerts.append([index, i, "Invalid Date"])
+                    foundAlerts.append([index, i, "Invalid Date, Perhaps Month and Day Swapped"])
         departmentNames.update({i[1]:index})
         departmentid.update({i[0]:index})
         index+=1
@@ -70,10 +72,10 @@ def studentCouncelingReport():
                     foundAlerts.append([index, i, "Invalid Requested Department"])
                 dateString = i[1].split("/")
                 if (int(dateString[1]) < 0 or int(dateString[1]) > 31 or int(dateString[0]) < 0 or int(dateString[0]) >12):
-                    foundAlerts.append([index, i, "Invalid Date"])
+                    foundAlerts.append([index, i, "Invalid Date, Perhaps Month and Day Swapped"])
                 dateString = i[2].split("/")
                 if (int(dateString[1]) < 0 or int(dateString[1]) > 31 or int(dateString[0]) < 0 or int(dateString[0]) >12):
-                    foundAlerts.append([index, i, "Invalid Date"])
+                    foundAlerts.append([index, i, "Invalid Date, Perhaps Month and Day Swapped"])
                 result = seenStudentIDs.get(i[0] + i[3])
                 if (result != None):
                     foundAlerts.append([index, i, "Duplicate Student Entry at index " + str(result)])
@@ -110,7 +112,6 @@ def studentPerformanceReport():
         index+=1
     csvPrinter("studentPreformance.csv", foundAlerts)
     
-
 def employeeReport():
     employees = myreader('Employee_Information.csv')
     departments = myreader('Department_Information.csv')
@@ -128,10 +129,10 @@ def employeeReport():
             else:
                 dateString = i[1].split("/")
                 if (int(dateString[1]) < 0 or int(dateString[1]) > 31 or int(dateString[0]) < 0 or int(dateString[0]) >12):
-                    foundAlerts.append([index, i, "Invalid Date"])
+                    foundAlerts.append([index, i, "Invalid Date, Perhaps Month and Day Swapped"])
                 dateString = i[2].split("/")
                 if (int(dateString[1]) < 0 or int(dateString[1]) > 31 or int(dateString[0]) < 0 or int(dateString[0]) >12):
-                    foundAlerts.append([index, i, "Invalid Date"])
+                    foundAlerts.append([index, i, "Invalid Date, Perhaps Month and Day Swapped"])
                 if validDepID.get(i[3]) != "a":
                     foundAlerts.append([index, i, "Invalid Department"])
                 result = seenEmployeeID.get(i[0])

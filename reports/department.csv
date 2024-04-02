@@ -5,5 +5,5 @@ Row,Value In Database ('|' is the seperator for the sub array),Error Type
 37,[IDEPT3868 | Center for Learning and Teaching (PPCCLT) | 3/26/1982 | ],Duplicate Department Name at index 17
 37,[IDEPT3868 | Center for Learning and Teaching (PPCCLT) | 3/26/1982 | ],Duplicate Department ID at index 17
 41,[IDEPT9009 | Laser Technology Enhancements |  | ],Missing Data
-44,[IDEPT9999 | Centre for Studies of Mars Ecology | 13/03/2025 | ],Invalid Date
+44,[IDEPT9999 | Centre for Studies of Mars Ecology | 13/03/2025 | ],"Invalid Date, Perhaps Month and Day Swapped"
 47,[IDEPT1825 | Materials Strength Testing | 9/21/1971 | ],Duplicate Department ID at index 13
