@@ -73,9 +73,13 @@ def studentCouncelingReport():
                 dateString = i[1].split("/")
                 if (int(dateString[1]) < 0 or int(dateString[1]) > 31 or int(dateString[0]) < 0 or int(dateString[0]) >12):
                     foundAlerts.append([index, i, "Invalid Date, Perhaps Month and Day Swapped"])
+                if int(dateString[2])<=1900:
+                    foundAlerts.append([index, i, "Date too early"])
                 dateString = i[2].split("/")
                 if (int(dateString[1]) < 0 or int(dateString[1]) > 31 or int(dateString[0]) < 0 or int(dateString[0]) >12):
                     foundAlerts.append([index, i, "Invalid Date, Perhaps Month and Day Swapped"])
+                if int(dateString[2])<=1900:
+                    foundAlerts.append([index, i, "Date too early"])
                 result = seenStudentIDs.get(i[0] + i[3])
                 if (result != None):
                     foundAlerts.append([index, i, "Duplicate Student Entry at index " + str(result)])
@@ -101,7 +105,7 @@ def studentPerformanceReport():
             else:
                 if int(i[4]) < 0 or int(i[4])>100:
                     foundAlerts.append([index, i, "Invalid Performance"])
-                if int(i[5]) < 0:
+                if int(i[5]) < 0 or int(i[5]) > 60:
                     foundAlerts.append([index, i, "Invalid Effort Hours"])
                 result = seenReports.get(i[0] + i[2])
                 if result != None:
@@ -130,9 +134,13 @@ def employeeReport():
                 dateString = i[1].split("/")
                 if (int(dateString[1]) < 0 or int(dateString[1]) > 31 or int(dateString[0]) < 0 or int(dateString[0]) >12):
                     foundAlerts.append([index, i, "Invalid Date, Perhaps Month and Day Swapped"])
+                if int(dateString[2])<=1900:
+                    foundAlerts.append([index, i, "Date too early"])
                 dateString = i[2].split("/")
                 if (int(dateString[1]) < 0 or int(dateString[1]) > 31 or int(dateString[0]) < 0 or int(dateString[0]) >12):
                     foundAlerts.append([index, i, "Invalid Date, Perhaps Month and Day Swapped"])
+                if int(dateString[2])<=1900:
+                    foundAlerts.append([index, i, "Date too early"])
                 if validDepID.get(i[3]) != "a":
                     foundAlerts.append([index, i, "Invalid Department"])
                 result = seenEmployeeID.get(i[0])
