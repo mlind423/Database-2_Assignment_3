@@ -74,7 +74,7 @@ stuCoun = pd.read_csv('./Student_Counceling_Information.csv')
 for index, row in stuCoun.iterrows():
     cursor.execute(f"INSERT or REPLACE INTO Student VALUES ('{row.Student_ID}', '{row.DOA}', '{row.DOB}', '{row.Department_Choices}', '{row.Department_Admission}');")
 
-dep = pd.read_csv('./Student_Performance_Data.csv')
+dep = pd.read_csv('./Updated_Performance.csv')
 for index, row in dep.iterrows():
     cursor.execute(f"INSERT or REPLACE INTO Performance VALUES ('{row.Student_ID}', '{row.Paper_ID}', '{row.Semster_Name}', '{row.Paper_Name}', '{row.Marks}', '{row.Effort_Hours}');")
 
